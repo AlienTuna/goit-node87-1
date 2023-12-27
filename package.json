@@ -1,0 +1,17 @@
+{
+  "name": "goit-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "nanoid": "^5.0.4",
+    "uuid": "^9.0.1",
+    "yargs": "^17.7.2"
+  }
+}

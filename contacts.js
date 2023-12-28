@@ -69,11 +69,11 @@ async function removeContact(contactId) {
     }
     const contactsList = await listContacts(true);
     const deleteIndex = contactsList.findIndex(el => el.id === contactId)
-    const contactsListAfter = contactsList.splice(deleteIndex, 1);
-    fs.writeFile(contactsPath, JSON.stringify(contactsListAfter))
+    const deletedContact = contactsList.splice(deleteIndex, 1);
+    fs.writeFile(contactsPath, JSON.stringify(contactsList))
     console.log(`Contact id=${contactId} was deleted`);
 
-    return contactsListAfter;
+    return contactsList;
 }
 
 // node index.js -a add -n <contactName> -e <contactEmail> -p <contactPhone>
